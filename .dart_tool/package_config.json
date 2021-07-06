@@ -74,6 +74,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "http",
+      "rootUri": "file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10",
       "packageUri": "lib/",
@@ -118,6 +130,12 @@
     {
       "name": "path_provider_windows",
       "rootUri": "file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pedantic",
+      "rootUri": "file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -212,7 +230,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-07-06T16:14:15.613915Z",
+  "generated": "2021-07-06T17:41:19.901850Z",
   "generator": "pub",
   "generatorVersion": "2.13.3"
 }

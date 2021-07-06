@@ -5,20 +5,17 @@
 // import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'country.dart';
+import 'package:http/http.dart' as http;
 // import 'package:path_provider/path_provider.dart';
 // import 'package:flutter/services.dart' show rootBundle;
 
 class CountryCard extends StatefulWidget {
-  // String country;
-  // CountryCard(this.country);
-
   @override
   _CountryCardState createState() => _CountryCardState();
 }
 
 class _CountryCardState extends State<CountryCard> {
   var _color = Colors.blue;
-  var countriesData = Countries.getData;
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +33,8 @@ class _CountryCardState extends State<CountryCard> {
               margin: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
-                  Text(countries<index><'name'>),
-                  Text(countriesData[index]),
+                  Text("countries<index><'name'>"),
+                  // Text(countriesData[index]),
                 ],
               ));
         },
