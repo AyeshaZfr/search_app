@@ -1,31 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:search_app/country.dart';
-import 'CountryCard.dart';
-import 'country.dart';
-// import 'dart:async';
-
-// import 'dart:io';
-// import 'package:flutter/services.dart' show rootBundle;
-
-// class MainScreen extends StatefulWidget {
-//   const MainScreen({Key? key}) : super(key: key);
-
-//   @override
-//   _MainScreenState createState() => _MainScreenState();
-// }
-
-// class _MainScreenState extends State<MainScreen> {
-// String country = '';
-// fetchFileData() async {
-//   String data;
-//   data = await rootBundle.loadString('assets/resources/countries.txt');
-//   setState(() {
-//     country = data;
-//   });
-// }
+import 'countriesListData/CountryListView.dart';
 
 class MainScreenState extends StatelessWidget {
-  var countriesData = Countries.getData;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -40,28 +16,22 @@ class MainScreenState extends StatelessWidget {
                       style: TextStyle(fontFamily: 'Avenir', fontSize: 20)),
                 ),
                 Tab(
-                  child: Text("Visted"),
+                  child: Text("Visted",
+                      style: TextStyle(fontFamily: 'Avenir', fontSize: 20)),
                 )
               ],
             ),
           ),
-          body:
-              // Column(
-              //   children: <Widget>[
-              TabBarView(
+          body: TabBarView(
             children: <Widget>[
               Tab(
-                child: CountryCard(countriesData![index]),
+                child: CountryListView(),
               ),
               Tab(
                 child: Text("Visted"),
               )
             ],
           ),
-          // CountriesList(),
-          // ],
-        )
-        // )
-        );
+        ));
   }
 }

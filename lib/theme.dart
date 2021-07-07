@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 ThemeData theme = ThemeData(
   fontFamily: "Avenir",
   primarySwatch: Colors.grey,
+  hoverColor: Colors.red,
   backgroundColor: Colors.white,
   hintColor: Colors.grey.withOpacity(0.8),
   errorColor: Colors.red,
