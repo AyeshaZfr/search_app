@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
-options: "cdc16b9b0a1fe3a8e009c7e2861f1b3d"
-build_time: [1625573349, 463529000]
+options: "c4e3823c5a4ae2347649cc7b7bbe30c7"
+build_time: [1625639204, 580807000]
 inputs:
   "/Users/ayeshazafar/Documents/GitHub/search_app/macos/Runner/MainFlutterWindow.swift": [1623437044, 0]
   "/Users/ayeshazafar/Documents/GitHub/search_app/macos/Runner/AppDelegate.swift": [1623437044, 0]
-  "/Users/ayeshazafar/Documents/GitHub/search_app/macos/Flutter/GeneratedPluginRegistrant.swift": [1625573283, 752221873]
+  "/Users/ayeshazafar/Documents/GitHub/search_app/macos/Flutter/GeneratedPluginRegistrant.swift": [1625639177, 314037831]

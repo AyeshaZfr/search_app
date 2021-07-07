@@ -22,9 +22,11 @@ class _CountryListViewState extends State<CountryListView> {
   @override
   void initState() {
     fetchCountry().then((value) {
-      _isLoading = false;
-      _country.addAll(value);
-      _countryDisplay = _country;
+      setState(() {
+        _isLoading = false;
+        _country.addAll(value);
+        _countryDisplay = _country;
+      });
     });
     super.initState();
   }

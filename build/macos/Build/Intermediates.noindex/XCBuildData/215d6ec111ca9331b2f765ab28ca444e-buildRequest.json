@@ -1,0 +1,58 @@
+{
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "93737eb7232f065b2297cf7b174d7770a26d6e580d3222b86d62fb80ec380c14"
+    }
+  ],
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx11.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "x86_64h",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Build/Products",
+      "derivedDataPath" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos",
+      "indexDataStoreFolderPath" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "COMPILER_INDEX_STORE_ENABLE" : "NO",
+          "OBJROOT" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Build/Intermediates.noindex",
+          "SYMROOT" : "/Users/ayeshazafar/Documents/GitHub/search_app/build/macos/Build/Products"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
