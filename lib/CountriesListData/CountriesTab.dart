@@ -3,9 +3,7 @@ import 'Services.dart';
 import 'CountryJsonData.dart';
 
 class CountriesTab extends StatefulWidget {
-  final bool _isVisited;
-  List<Country> _visitedCountries = <Country>[];
-  CountriesTab(this._isVisited);
+  CountriesTab();
 
   @override
   _CountriesTabState createState() => _CountriesTabState();
@@ -14,66 +12,46 @@ class CountriesTab extends StatefulWidget {
 class _CountriesTabState extends State<CountriesTab> {
   List<Country> _country = <Country>[];
   List<Country> _countryDisplay = <Country>[];
-
+  // List<bool?> _isChecked = <bool?>[];
   int _selectedIndex = 0;
+
   _onSelected(int index) {
-    setState(() => _selectedIndex = index);
-    widget._visitedCountries.add((_countryDisplay[index]));
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 
   bool _isLoading = true;
+  bool _isChecked = true;
 
   @override
-  void didUpdateWidget(CountriesTab oldWidget) {
-    if (widget._visitedCountries != oldWidget._visitedCountries) {
-      _CountriesTabState();
-    }
-    super.didUpdateWidget(oldWidget);
-
-    print("didUpdateWidget");
-  }
-
   void initState() {
     fetchCountry().then((value) {
       setState(() {
         _isLoading = false;
         _country.addAll(value);
         _countryDisplay = _country;
+        // _isChecked = List<bool?>.filled(_countryDisplay.length, false);
       });
     });
     super.initState();
   }
 
   Widget build(BuildContext context) {
-    return widget._isVisited == false
-        ? Container(
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                if (_isLoading == false) {
-                  return index == 0 ? _searchBar() : _listItem(index - 1);
-                } else {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
-              itemCount: _countryDisplay.length + 1,
-            ),
-          )
-        : Container(
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                if (_isLoading == false) {
-                  return _visitedIndex(index);
-                } else {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
-              itemCount: widget._visitedCountries.length,
-            ),
-          );
+    return Container(
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          if (_isLoading == false) {
+            return index == 0 ? _searchBar() : _listItem(index - 1);
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+        itemCount: _countryDisplay.length + 1,
+      ),
+    );
   }
 
   _searchBar() {
@@ -108,8 +86,11 @@ class _CountriesTabState extends State<CountriesTab> {
             child: ListTile(
               onLongPress: () {
                 setState(() {
-                  widget._visitedCountries.add((_countryDisplay[index]));
-                  print("added to list");
+                  if (!VisitedList().country.contains(_countryDisplay[index])) {
+                    VisitedList().addCountry(_countryDisplay[index]);
+                  }
+
+                  _isChecked = true;
                 });
               },
               onTap: () => _onSelected(index),
@@ -124,28 +105,13 @@ class _CountriesTabState extends State<CountriesTab> {
           ),
         ]);
   }
+}
 
-  _visitedIndex(index) {
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Container(
-            height: 70,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: _selectedIndex == index ? Colors.blue : Colors.white,
-            ),
-            margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
-            child: ListTile(
-              title: Text(
-                widget._visitedCountries[index].name,
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-          ),
-        ]);
+class VisitedList extends ChangeNotifier {
+  static List<Country> _visitedCountries = [];
+  List<Country> get country => _visitedCountries;
+  void addCountry(Country country) {
+    _visitedCountries.add(country);
+    notifyListeners();
   }
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'CountriesListData/CountriesTab.dart';
+import 'VisitedCountriesList/VisitesTab.dart';
 
 class MainScreenState extends StatelessWidget {
-  // @override
-
   Widget build(BuildContext context) {
     return DefaultTabController(
         length: 2,
@@ -26,10 +25,10 @@ class MainScreenState extends StatelessWidget {
           body: TabBarView(
             children: <Widget>[
               Tab(
-                child: CountriesTab(false),
+                child: CountriesTab(),
               ),
               Tab(
-                child: CountriesTab(true),
+                child: VisitedCountries(),
               )
             ],
           ),
