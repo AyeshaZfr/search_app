@@ -24,6 +24,15 @@ class _CountriesTabState extends State<CountriesTab> {
   bool _isLoading = true;
 
   @override
+  void didUpdateWidget(CountriesTab oldWidget) {
+    if (widget._visitedCountries != oldWidget._visitedCountries) {
+      _CountriesTabState();
+    }
+    super.didUpdateWidget(oldWidget);
+
+    print("didUpdateWidget");
+  }
+
   void initState() {
     fetchCountry().then((value) {
       setState(() {
@@ -98,8 +107,10 @@ class _CountriesTabState extends State<CountriesTab> {
             margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
             child: ListTile(
               onLongPress: () {
-                widget._visitedCountries.add((_countryDisplay[index]));
-                print("added to list");
+                setState(() {
+                  widget._visitedCountries.add((_countryDisplay[index]));
+                  print("added to list");
+                });
               },
               onTap: () => _onSelected(index),
               title: Text(
@@ -136,15 +147,5 @@ class _CountriesTabState extends State<CountriesTab> {
             ),
           ),
         ]);
-  }
-
-  @override
-  void didUpdateWidget(CountriesTab oldWidget) {
-    if (widget._visitedCountries != oldWidget._visitedCountries) {
-      _CountriesTabState();
-    }
-    super.didUpdateWidget(oldWidget);
-
-    print("didUpdateWidget");
   }
 }
