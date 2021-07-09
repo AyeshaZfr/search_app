@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:search_app/CountriesListData/CountriesTab.dart';
-import 'theme.dart';
-import 'mainScreen.dart';
+import 'model/VisitedList.dart';
+import 'theme/theme.dart';
+import 'view/mainScreen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
-          home: MainScreenState(),
+          home: MainScreen(),
           theme: theme,
         ));
   }
