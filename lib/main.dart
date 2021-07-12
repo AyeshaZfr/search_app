@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'theme.dart';
-import 'mainScreen.dart';
+import 'model/VisitedList.dart';
+import 'theme/theme.dart';
+import 'view/MainScreen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,9 +11,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MainScreenState(),
-      theme: theme,
-    );
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => VisitedList(),
+          ),
+        ],
+        child: MaterialApp(
+          home: MainScreen(),
+          theme: theme,
+        ));
   }
 }
