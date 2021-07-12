@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ListTileDisplay extends StatelessWidget {
-  Widget _widget;
+  final Widget _widget;
   ListTileDisplay(this._widget);
   @override
   Widget build(BuildContext context) {

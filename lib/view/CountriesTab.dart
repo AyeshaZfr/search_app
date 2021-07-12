@@ -7,8 +7,6 @@ import '../common/ListTile.dart';
 import '../common/Loading.dart';
 
 class CountriesTab extends StatefulWidget {
-  // CountriesTab();
-
   @override
   _CountriesTabState createState() => _CountriesTabState();
 }
@@ -16,7 +14,6 @@ class CountriesTab extends StatefulWidget {
 class _CountriesTabState extends State<CountriesTab> {
   static List<Country> _country = <Country>[];
   List<Country> _countryDisplay = <Country>[];
-  static List<bool?> _isChecked = _isChecked = List<bool?>.filled(243, false);
 
   bool _isLoading = true;
 
@@ -32,8 +29,7 @@ class _CountriesTabState extends State<CountriesTab> {
   }
 
   void visitedTabManager(index) {
-    if (VisitedList().country.contains(_countryDisplay[index]) &&
-        _isChecked[index] == false) {
+    if (VisitedList().country.contains(_countryDisplay[index])) {
       VisitedList().removeCountry(_countryDisplay[index]);
     } else {
       VisitedList().addCountry(_countryDisplay[index]);
@@ -41,9 +37,14 @@ class _CountriesTabState extends State<CountriesTab> {
   }
 
   void searchBarManager(text) {
+    _countryDisplay = [];
     _countryDisplay = _country.where((country) {
       var countryName = country.name.toLowerCase();
-      return countryName.contains(text);
+      if (!_countryDisplay.contains(countryName.contains(text))) {
+        return countryName.contains(text);
+      } else {
+        return true;
+      }
     }).toList();
   }
 
@@ -79,9 +80,9 @@ class _CountriesTabState extends State<CountriesTab> {
 
   _checkBox(index) {
     return CheckboxListTile(
-      value: _isChecked[index],
+      value: _countryDisplay[index].isVisited,
       onChanged: (bool? value) {
-        _isChecked[index] = value;
+        _countryDisplay[index].isVisited = value;
         setState(() {
           visitedTabManager(index);
         });

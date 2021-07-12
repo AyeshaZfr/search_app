@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'model/VisitedList.dart';
 import 'theme/theme.dart';
-import 'view/mainScreen.dart';
+import 'view/MainScreen.dart';
 import 'package:provider/provider.dart';
 
 void main() {

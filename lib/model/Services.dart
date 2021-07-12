@@ -1,8 +1,5 @@
-// import 'package:flutter/material.dart';
-
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'CountryJsonData.dart';
 import 'CountryJsonData.dart';
 import 'package:http/http.dart' as http;
 
@@ -18,6 +15,6 @@ Future<List<Country>> fetchCountry() async {
   if (200 == response.statusCode) {
     return compute(parseCountry, response.body);
   } else {
-    throw Exception("API Request Errot");
+    throw Exception("API Request Error");
   }
 }

@@ -1,8 +1,9 @@
 class Country {
   String name = '';
   String code = '';
+  bool? isVisited = false;
 
-  Country({required this.name, required this.code});
+  Country({required this.name, required this.code, required this.isVisited});
 
   Country.fromJson(Map<String, dynamic> json) {
     name = json['name'];

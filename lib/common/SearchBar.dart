@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatefulWidget {
-  Widget _widget;
+  final Widget _widget;
   SearchBar(this._widget);
 
   @override
