@@ -22,7 +22,9 @@ class _CountriesTabState extends State<CountriesTab> {
       setState(() {
         _isLoading = false;
         _country.addAll(value);
-        _countryDisplay = _country;
+        if (!_countryDisplay.contains(value)) {
+          _countryDisplay = _country;
+        }
       });
     });
     super.initState();
@@ -36,16 +38,20 @@ class _CountriesTabState extends State<CountriesTab> {
     }
   }
 
-  void searchBarManager(text) {
-    _countryDisplay = [];
-    _countryDisplay = _country.where((country) {
-      var countryName = country.name.toLowerCase();
-      if (!_countryDisplay.contains(countryName.contains(text))) {
-        return countryName.contains(text);
-      } else {
-        return true;
-      }
-    }).toList();
+  TextEditingController ctrl = new TextEditingController();
+
+  onChanged(text) {
+    setState(() {
+      _countryDisplay = [];
+      _countryDisplay = _country.where((country) {
+        var countryName = country.name.toLowerCase();
+        if (!_countryDisplay.contains(countryName.contains(text))) {
+          return countryName.contains(text);
+        } else {
+          return false;
+        }
+      }).toList();
+    });
   }
 
   @override
@@ -55,7 +61,10 @@ class _CountriesTabState extends State<CountriesTab> {
         itemBuilder: (context, index) {
           if (_isLoading == false) {
             return index == 0
-                ? SearchBar(_searchBar())
+                ? SearchBar(
+                    ctrl: ctrl,
+                    onChanged: onChanged,
+                  )
                 : ListTileDisplay(_checkBox(index - 1));
           } else {
             return Loading();
@@ -63,18 +72,6 @@ class _CountriesTabState extends State<CountriesTab> {
         },
         itemCount: _countryDisplay.length + 1,
       ),
-    );
-  }
-
-  _searchBar() {
-    return TextField(
-      decoration: InputDecoration(hintText: "Search.."),
-      onChanged: (text) {
-        text = text.toLowerCase();
-        setState(() {
-          searchBarManager(text);
-        });
-      },
     );
   }
 
