@@ -4,7 +4,7 @@ ThemeData theme = ThemeData(
   fontFamily: "Avenir",
   textTheme: TextTheme(
     headline1:
-        TextStyle(fontFamily: 'Avenir', fontSize: 20, color: Colors.black),
+        TextStyle(fontFamily: 'Avenir', fontSize: 20, color: Colors.white),
     headline2: TextStyle(
         fontFamily: 'Avenir',
         fontSize: 16.5,

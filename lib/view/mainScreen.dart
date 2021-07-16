@@ -29,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 Tab(
                   child: Text("Visted",
-                      style: TextStyle(fontFamily: 'Avenir', fontSize: 20)),
+                      style: Theme.of(context).textTheme.headline1),
                 )
               ],
             ),

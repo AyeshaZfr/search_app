@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatefulWidget {
-  final Widget _widget;
-  SearchBar(this._widget);
+class SearchBar extends StatelessWidget {
+  const SearchBar({Key? key, required this.ctrl, required this.onChanged})
+      : super(key: key);
 
-  @override
-  _SearchBarState createState() => _SearchBarState();
-}
+  final Function onChanged;
+  final TextEditingController ctrl;
 
-class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
       child: Column(children: [
-        widget._widget,
+        TextField(
+          controller: ctrl,
+          decoration: InputDecoration(hintText: "Search.."),
+          onChanged: (text) {
+            onChanged(text);
+          },
+        ),
         Container(
             margin: EdgeInsets.all(10),
             child: Text("Tap on a country to add it to your visited list.",
