@@ -21,7 +21,10 @@ class _CountriesTabState extends State<CountriesTab> {
     fetchCountry().then((value) {
       setState(() {
         _isLoading = false;
-        _country.addAll(value);
+        if (!_country.contains(value)) {
+          _country.addAll(value);
+        }
+
         if (!_countryDisplay.contains(value)) {
           _countryDisplay = _country;
         }
