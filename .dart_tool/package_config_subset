@@ -1,7 +1,7 @@
 search_app
 2.12
-file:///Users/ayeshazafar/Desktop/search_app/
-file:///Users/ayeshazafar/Desktop/search_app/lib/
+file:///Users/ayeshazafar/Documents/GitHub/search_app/
+file:///Users/ayeshazafar/Documents/GitHub/search_app/lib/
 async
 2.12
 file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/
@@ -96,8 +96,8 @@ file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.
 file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.0.0/lib/
 plugin_platform_interface
 2.12
-file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0/
-file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.0/lib/
+file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.1/
+file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.0.1/lib/
 process
 2.12
 file:///Users/ayeshazafar/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.1/
