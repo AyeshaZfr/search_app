@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES</key>
 		<data>
-		wH38HvIAEIBrY6UnrCdvc33ehUg=
+		qQt11gHDwR7BnfGNcJes9RFGJek=
 		</data>
 		<key>flutter_assets/assets/fonts/AvenirLTStd-Black.otf</key>
 		<data>
@@ -38,11 +38,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-<<<<<<< HEAD
-		FOaJnbTIUVFIaWKE0yz6Qia3zGU=
-=======
-		wR4eWy/CwOE8gQ+k+2ELCTZSQQ4=
->>>>>>> 6e832475e82e1e1a2b1e7d367ba7467e91168268
+		IYZvjBU6eI04vXdgTWsxvtrspe4=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -81,11 +77,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wH38HvIAEIBrY6UnrCdvc33ehUg=
+			qQt11gHDwR7BnfGNcJes9RFGJek=
 			</data>
 			<key>hash2</key>
 			<data>
-			EHPg0r/DO8PT3iMgCzlrdTytSrYlQAztwRR7EWqDYik=
+			17QECQmTIHZEkZaIr9FnXzNsk3M2zSadbA2NsnlEeDc=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/fonts/AvenirLTStd-Black.otf</key>
@@ -136,19 +132,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-<<<<<<< HEAD
-			FOaJnbTIUVFIaWKE0yz6Qia3zGU=
+			IYZvjBU6eI04vXdgTWsxvtrspe4=
 			</data>
 			<key>hash2</key>
 			<data>
-			jX2KiXd/F/KZJpoihtNsNVXQxqPJtiauGag/p9Yo5BQ=
-=======
-			wR4eWy/CwOE8gQ+k+2ELCTZSQQ4=
-			</data>
-			<key>hash2</key>
-			<data>
-			qYoQMU+ViSB0dxfcV1kM6zWgMjJO8TSdLfSohQdx7U8=
->>>>>>> 6e832475e82e1e1a2b1e7d367ba7467e91168268
+			eKZ4Kum+7PdF/nIYaBR8eQRtsZNg6D8n7XDdgTIefk4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
